@@ -1,0 +1,16 @@
+[Unit]
+Description=快分享 File Share Service
+After=network.target
+
+[Service]
+Type=simple
+User=www-data
+WorkingDirectory=/opt/fileshare
+ExecStart=/opt/fileshare/venv/bin/python app.py
+Restart=always
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
