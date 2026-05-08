@@ -4,9 +4,9 @@ After=network.target
 
 [Service]
 Type=simple
-User=www-data
-WorkingDirectory=/opt/fileshare
-ExecStart=/opt/fileshare/venv/bin/python app.py
+User=mac
+WorkingDirectory=/home/mac/fileshare
+ExecStart=/home/mac/fileshare/venv/bin/python app.py
 Restart=always
 RestartSec=5
 StandardOutput=journal
