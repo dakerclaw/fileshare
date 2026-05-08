@@ -1,6 +1,6 @@
 # 快分享
 
-一个轻量的本地文件 / 文本中转分享工具，一行命令即可启动，生成分享链接与二维码，局域网内任何设备均可访问。
+一个轻量的文件 / 文本中转分享工具，一行命令即可启动，生成分享链接与二维码。
 
 ![Python](https://img.shields.io/badge/Python-3.8+-blue?logo=python)
 ![Flask](https://img.shields.io/badge/Flask-2.x-green?logo=flask)
