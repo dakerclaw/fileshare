@@ -20,25 +20,36 @@
 
 ## 一键安装
 
-> 需要 Python 3.8+，建议使用虚拟环境。
+> 需要 Python 3.8+。
 
 ```bash
 # 1. 克隆仓库
 git clone https://github.com/dakerclaw/fileshare.git
 cd fileshare
 
-# 2. 安装依赖
+# 2. 创建并激活虚拟环境
+python -m venv venv
+
+# macOS / Linux
+source venv/bin/activate
+
+# Windows CMD / PowerShell
+venv\Scripts\activate
+
+# 3. 安装依赖
 pip install flask qrcode pillow
 
-# 3. 启动服务
+# 4. 启动服务
 python app.py
 ```
 
 浏览器访问 **http://localhost:5200** 即可使用。
 
+> **提示**：每次重新打开终端后，需先执行 `source venv/bin/activate`（Linux/macOS）或 `venv\Scripts\activate`（Windows）激活虚拟环境，再运行 `python app.py`。
+
 ### Windows 双击启动
 
-直接双击项目目录下的 `start.bat`，服务自动启动并打印访问地址。
+直接双击项目目录下的 `start.bat`，服务自动启动并打印访问地址（无需手动激活虚拟环境）。
 
 ---
 
@@ -61,13 +72,12 @@ http://<本机IP>:5200
 ```bash
 # 1. 停止服务（Ctrl+C）
 
-# 2. 删除项目目录（含数据库和上传文件）
+# 2. 删除项目目录（含虚拟环境、数据库和上传文件）
 rm -rf fileshare          # macOS / Linux
 rd /s /q fileshare        # Windows CMD
-
-# 3. 如已安装依赖，可选择卸载
-pip uninstall flask qrcode pillow
 ```
+
+无需额外卸载 pip 包——删除目录即彻底清除所有内容。
 
 ---
 
