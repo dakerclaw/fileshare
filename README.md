@@ -80,7 +80,6 @@ fileshare/
 ├── app.py              # Flask 后端
 ├── install.sh          # 一键安装脚本
 ├── uninstall.sh        # 卸载脚本
-├── fileshare.service   # systemd 服务文件
 ├── requirements.txt    # Python 依赖
 ├── data.db             # SQLite 数据库（自动创建）
 ├── uploads/            # 上传文件存储（自动创建）
